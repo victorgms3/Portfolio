@@ -1301,3 +1301,39 @@ code {
             .parcours-timeline { padding-left: 1.8rem; }
             .parcours-dot { left: -1.6rem; }
         }
+
+/* Boutons de la timeline */
+.btn-timeline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1rem;
+    font-size: 0.78rem;
+    font-family: 'Space Mono', monospace;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    letter-spacing: 0.02em;
+}
+
+.btn-timeline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+/* Variante accentuée (violet/accent) */
+.btn-timeline-accent {
+    border-color: rgba(167, 139, 250, 0.35);
+    background: rgba(167, 139, 250, 0.08);
+    color: rgba(167, 139, 250, 0.9);
+}
+
+.btn-timeline-accent:hover {
+    background: rgba(167, 139, 250, 0.18);
+    border-color: rgba(167, 139, 250, 0.6);
+    color: #a78bfa;
+}        
