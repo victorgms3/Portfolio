@@ -591,49 +591,48 @@
             <div class="veille-definition reveal">
                 <p class="veille-intro">La veille technologique est un processus de collecte, d'analyse et de diffusion d'informations sur les évolutions technologiques, les tendances du marché et les innovations dans un domaine spécifique. Elle permet aux professionnels de rester informés des dernières avancées, d'anticiper les changements et de prendre des décisions éclairées pour leurs projets et stratégies.</p>
             </div>
-            <h3 class="section-title reveal">Micron, Samsung &amp; une crise de la RAM :<br>quel impact sur le développement IA ?</h3>
+            <h3 class="section-title reveal">La crise mondiale de la RAM :<br>quel impact sur le déploiement de l'IA en entreprise ?</h3>
 
             <div class="veille-layout">
                 <div class="veille-main reveal">
                     <div class="veille-meta">
                         <span class="veille-date">Sujet actif · 2025 – 2026</span>
-                        <span class="veille-category">GPU · IA · Développement</span>
+                        <span class="veille-category">Hardware · Mémoire Vive · IA</span>
                     </div>
-                    <p class="veille-intro">L'explosion des prix des GPU NVIDIA et la stagnation de la VRAM sur les cartes grand public forcent les développeurs — notamment dans le domaine de l'IA — à repenser totalement leurs architectures.</p>
+                    <p class="veille-intro">L'explosion des prix de la mémoire vive (RAM) reconfigure totalement le marché de la tech. Entre choix stratégiques passés des constructeurs et appétit insatiable des géants du cloud, la RAM est devenue un composant critique et hors de prix, menaçant l'accessibilité de l'IA locale.</p>
 
                     <div class="veille-block">
                         <div class="veille-block-num">01</div>
                         <div class="veille-block-content">
-                            <h4>Le constat : une VRAM qui ne suit plus</h4>
-                            <p>La RTX 5060, modèle grand public de la série Blackwell (2025), est lancée avec seulement 8 Go de VRAM — soit la même quantité que la RTX 3060 de 2021. Pourtant, les modèles de langage à 7 milliards de paramètres requièrent déjà entre 8 et 16 Go pour tourner confortablement en local. Le segment haut de gamme (RTX 5080 / 5090) voit lui ses prix s'envoler au-delà de 1 500 € à 2 500 €.</p>
+                            <h4>Le traumatisme de 2018 et la restriction de l'offre</h4>
+                            <p>Pour comprendre la crise actuelle, il faut remonter à la période 2017-2018. Une surproduction massive a entraîné l'effondrement des prix de la RAM, causant des pertes colossales pour le triumvirat du marché : Samsung, SK Hynix et Micron. En réponse, ces fabricants ont instauré une discipline stricte et bridé volontairement leurs capacités de production pour éviter qu'un tel désastre financier ne se reproduise.</p>
                         </div>
                     </div>
 
                     <div class="veille-block">
                         <div class="veille-block-num">02</div>
                         <div class="veille-block-content">
-                            <h4>L'impact direct sur le développement IA local</h4>
-                            <p>Lors de mon stage de 2ème année chez D8 Espresso Excellence, j'ai vécu ce problème concrètement : sans GPU, le serveur de test tournait à 1 token/minute — inutilisable. La sélection de la RTX 5060 Ti 16 Go (à la place de la version 8 Go) a été un choix technique délibéré pour permettre l'exécution de modèles de 7B+ paramètres. Ce surcoût est directement lié à la pression du marché NVIDIA.</p>
+                            <h4>La transition DDR4 / DDR5 phagocytée par l'IA</h4>
+                            <p>Alors que le marché grand public amorçait sa transition vers la norme DDR5, l'explosion soudaine de l'IA générative a bouleversé la demande. Les "Hyperscalers" (Amazon, Microsoft, Meta...) ont siphonné la production via des contrats pluriannuels massifs pour équiper leurs serveurs. Face à cette manne financière, les constructeurs ont tourné le dos aux consommateurs. Micron a même été jusqu'à stopper l'activité grand public de sa célèbre marque Crucial.</p>
                         </div>
                     </div>
 
                     <div class="veille-block">
                         <div class="veille-block-num">03</div>
                         <div class="veille-block-content">
-                            <h4>Les réponses de l'industrie du développement</h4>
-                            <p>Face à cette contrainte, plusieurs tendances émergent : la quantification des modèles (GGUF Q4/Q8 via llama.cpp) qui réduit de 50 à 75% les besoins en VRAM, l'usage de la RAM système comme débordement (RAM offloading), les architectures RAG qui préfèrent la récupération à la mémorisation, et les modèles spécialisés plus petits (1B–3B paramètres) plutôt que des LLM généralistes.</p>
+                            <h4>Une légère accalmie en 2026, des tarifs toujours aberrants</h4>
+                            <p>Début 2026, une très légère baisse des prix est observée, due en partie à la stagnation des ventes et au refus des consommateurs de céder à la panique. Si de nouveaux acteurs émergent (comme le fabricant chinois CXMT avec ses puces DDR5), les tarifs restent totalement prohibitifs, avoisinant encore les 600 dollars pour un kit de 32 Go chez certains leaders. Le standard moyen de RAM dans les PC risque donc d'être revu à la baisse.</p>
                         </div>
                     </div>
 
                     <div class="veille-block">
                         <div class="veille-block-num">04</div>
                         <div class="veille-block-content">
-                            <h4>Mon analyse</h4>
-                            <p>Cette situation valorise le code efficient et les architectures légères. Le développeur qui sait optimiser ses modèles (quantification, fine-tuning ciblé, RAG) devient plus précieux que celui qui compte sur la puissance brute. C'est exactement l'approche que j'ai adoptée dans mon projet IA : privilégier un RAG connecté à Oracle plutôt qu'un modèle sur-paramétré incapable de tourner sur le matériel disponible.</p>
+                            <h4>Mon analyse : la validation de l'approche GPU</h4>
+                            <p>L'utilisation de la RAM système (CPU offloading) a longtemps été l'alternative économique pour faire tourner des IA locales sans investir dans de lourdes cartes graphiques. Avec une DDR5 hors de prix, cette issue de secours se referme. Lors de mon stage de 2ème année, j'ai constaté qu'un serveur sans GPU décent plafonnait à 1 token/minute. Cette crise de la RAM valide mon choix technique : pour une PME, il devient paradoxalement plus rentable et performant d'investir chirurgicalement dans un GPU doté d'assez de mémoire (RTX 5060 Ti 16Go) plutôt que de miser sur des serveurs gavés d'une RAM devenue inabordable.</p>
                         </div>
                     </div>
 
-                    <!-- GRAPHIQUE RAM -->
                     <div class="veille-chart-block reveal">
                         <div class="veille-chart-header">
                             <h4> Évolution du prix RAM DDR5-6000 (2×16 Go) — 18 derniers mois</h4>
@@ -649,53 +648,48 @@
                             </div>
                             <div class="veille-chart-insight">
                                 <span class="chart-dot chart-dot-accent"></span>
-                                <span>Flambée brutale à <strong>+500 $</strong> à partir d'oct. 2025 (tensions tarifaires US)</span>
+                                <span>Flambée brutale à <strong>+500 $</strong> à partir d'oct. 2025</span>
                             </div>
                             <div class="veille-chart-insight">
                                 <span class="chart-dot chart-dot-green"></span>
-                                <span>Hausse maintenue en <strong>2026</strong> — impact direct sur les budgets IA</span>
+                                <span>Légère accalmie en <strong>2026</strong> mais maintien d'un plateau élevé</span>
                             </div>
                         </div>
                         <p class="veille-chart-source">
-                            Source : <a href="https://pcpartpicker.com" target="_blank" rel="noopener">PCPartPicker.com</a> — Average RAM Price (USD) Over Last 18 Months · DDR5-6000 2×16 GB
+                            Source : <a href="https://pcpartpicker.com" target="_blank" rel="noopener">PCPartPicker.com</a> — Average RAM Price (USD) Over Last 18 Months
                         </p>
                     </div>
 
                     <div class="veille-sources reveal">
-                        <h4>Sources de veille</h4>
+                        <h4>Sources actives de ma veille</h4>
                         <div class="sources-grid">
-                            <a href="https://www.techpowerup.com" target="_blank" class="source-item">TechPowerUp — Benchmarks GPU</a>
-                            <a href="https://huggingface.co" target="_blank" class="source-item">Hugging Face — État des LLM</a>
-                            <a href="https://www.tomshardware.com" target="_blank" class="source-item">Tom's Hardware — Actualité GPU</a>
-                            <a href="https://github.com/ggerganov/llama.cpp" target="_blank" class="source-item">llama.cpp — Quantification GGUF</a>
+                            <a href="https://youtu.be/P9QseQr5Exc" target="_blank" class="source-item">DiscoverID — "La RAM, c'est fini pour nous" (Déc. 2025)</a>
+                            <a href="https://www.youtube.com/watch?v=TCyFrs-hhVk" target="_blank" class="source-item">DiscoverID — "Le Prix de la RAM baisse ENFIN" (Fév. 2026)</a>
+                            <a href="https://pcpartpicker.com" target="_blank" class="source-item">PCPartPicker — Suivi tarifaire RAM (Data)</a>
+                            <a href="https://www.tomshardware.com" target="_blank" class="source-item">Tom's Hardware — Actualité et Benchmarks Mémoire</a>
                         </div>
                     </div>
                 </div>
 
                 <aside class="veille-aside reveal">
                     <div class="veille-stat-card">
-                        <div class="stat-label">RTX 5060 VRAM (2025)</div>
-                        <div class="stat-value">8 Go</div>
-                        <div class="stat-note">= RTX 3060 en 2021</div>
+                        <div class="stat-label">Surproduction historique</div>
+                        <div class="stat-value">2018</div>
+                        <div class="stat-note">Traumatisme et restriction des fabricants</div>
                     </div>
                     <div class="veille-stat-card">
-                        <div class="stat-label">LLM 7B — VRAM minimum</div>
-                        <div class="stat-value">8–16 Go</div>
-                        <div class="stat-note">Dépend de la quantisation</div>
+                        <div class="stat-label">Oligopole du marché</div>
+                        <div class="stat-value">~100%</div>
+                        <div class="stat-note">Détenu par Samsung, SK Hynix et Micron</div>
                     </div>
                     <div class="veille-stat-card veille-stat-highlight">
-                        <div class="stat-label">Mon choix — RTX 5060 Ti</div>
-                        <div class="stat-value">16 Go</div>
-                        <div class="stat-note">Pour supporter les modèles 7B+ en production</div>
-                    </div>
-                    <div class="veille-stat-card">
-                        <div class="stat-label">RTX 5090 — Prix indicatif</div>
-                        <div class="stat-value">+2 500 €</div>
-                        <div class="stat-note">Hors de portée pour les PME</div>
+                        <div class="stat-label">Prix DDR5 32Go (2026)</div>
+                        <div class="stat-value">~600 $</div>
+                        <div class="stat-note">Tarif exorbitant limitant l'accès grand public</div>
                     </div>
                     <div class="veille-link-card">
-                        <p>Cette veille est directement liée à mon projet de stage IA.</p>
-                        <button onclick="openModal('modal-ia')" class="btn-veille">Voir le projet →</button>
+                        <p>Cette veille technologique justifie l'architecture matérielle choisie lors de mon stage de 2ème année pour contourner la crise.</p>
+                        <button onclick="openModal('modal-ia')" class="btn-veille">Voir le projet IA →</button>
                     </div>
                 </aside>
             </div>
