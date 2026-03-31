@@ -613,6 +613,23 @@
             </div>
             <div class="project-link">Voir sur GitHub →</div>
           </article>
+          <article
+            class="project-card reveal"
+            onclick="openModal('modal-savapp')"
+          >
+            <div class="project-tag">Projet scolaire</div>
+            <h3>SavApp — Calculateur de saponification</h3>
+            <p>
+              Application web de calcul métier pour la fabrication de savons à
+              froid — indices de saponification, surgraissage et propriétés des
+              corps gras.
+            </p>
+            <div class="project-stack">
+              <span>Angular</span><span>Kotlin</span><span>Spring Boot</span
+              ><span>MariaDB</span><span>API REST</span>
+            </div>
+            <div class="project-link">Voir sur GitHub →</div>
+          </article>
         </div>
       </div>
     </section>
@@ -1435,7 +1452,8 @@
                   href="https://www.franceinfo.fr/replay-radio/d-un-monde-a-l-autre/consequence-de-la-guerre-au-moyen-orient-la-production-mondiale-de-semi-conducteurs-penalisee-par-une-penurie-d-helium_7824686.html#:~:text=Un%20tiers%20de%20la%20production%20mondiale%20d%27hélium%20vient%20du%20Qatar&text=Or%2C%20le%20conflit%20en%20cours,La%20production%20a%20été%20interrompue."
                   target="_blank"
                   class="source-item"
-                  >France Info — "La production mondiale d'hélium est perturbée" (Avril 2026)</a
+                  >France Info — "La production mondiale d'hélium est perturbée"
+                  (Avril 2026)</a
                 >
               </div>
             </div>
@@ -1559,8 +1577,8 @@
                 </div>
               </div>
               <a href="assets/ggAlerts.png" target="_blank" class="btn-outline">
-                    Alertes Google →
-                </a>
+                Alertes Google →
+              </a>
               <div class="veille-alert-footer">
                 <svg
                   width="14"
@@ -1574,7 +1592,6 @@
                   <polyline points="12 6 12 12 16 14" />
                 </svg>
                 Mis à jour en temps réel · Livraison quotidienne par e-mail
-                
               </div>
             </div>
           </div>
@@ -2049,6 +2066,40 @@
         >
       </div>
     </div>
+    <div id="modal-savapp" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('modal-savapp')">✕</button>
+        <div class="modal-tag">Projet personnel</div>
+        <h2>SavApp — Calculateur de saponification</h2>
+        <p class="modal-intro">Application web permettant de calculer la composition de savons en saponification à froid (SaF), intégrant des algorithmes métier sur les indices de saponification, le surgraissage et les propriétés des corps gras.</p>
+
+        <div class="modal-section">
+            <h4>Architecture</h4>
+            <div class="modal-arch">
+                <div class="arch-item">Angular<br><small>Frontend SPA</small></div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-item arch-item-accent">API REST<br><small>Spring Boot · Kotlin</small></div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-item">MariaDB<br><small>Ingrédients & users</small></div>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <h4>Fonctionnalités</h4>
+            <ul class="modal-list">
+                <li>Calcul des quantités de soude selon les indices de saponification de chaque corps gras</li>
+                <li>Gestion du taux de surgraissage pour les propriétés finales du savon</li>
+                <li>API REST externe gérant les ingrédients, utilisateurs et données métier</li>
+                <li>Backend développé en Kotlin avec Spring Boot</li>
+            </ul>
+        </div>
+
+        <div class="modal-stack">
+            <span>Angular</span><span>TypeScript</span><span>Kotlin</span><span>Spring Boot</span><span>MariaDB</span><span>API REST</span>
+        </div>
+        <a href="https://github.com/victorgms3/sav-app" target="_blank" class="btn-modal">Voir sur GitHub</a>
+    </div>
+</div>
 
     <script src="script.js"></script>
   </body>
