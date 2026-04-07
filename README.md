@@ -8,7 +8,7 @@
 [![Disponibilité](https://img.shields.io/badge/Disponibilité-Juin_2026-success?style=for-the-badge)](#)
 [![Lieu](https://img.shields.io/badge/Lieu-Melun_(77)-orange?style=for-the-badge)](#)
 
-[🌐 Voir le Portfolio en ligne](https://victorgms3.github.io/testPortfolio/) • [💼 Mon LinkedIn](https://www.linkedin.com/in/victor-gomes-silva-149304244/)
+[🌐 Voir le Portfolio en ligne](https://victorgms3.github.io/Portfolio/) • [💼 Mon LinkedIn](https://www.linkedin.com/in/victor-gomes-silva-149304244/)
 
 </div>
 
