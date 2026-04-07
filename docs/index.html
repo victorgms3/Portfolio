@@ -26,6 +26,7 @@
       name="description"
       content="Portfolio étudiant BTS SIO SLAM — Développement Web, Mobile, IA locale et Solutions d'Entreprise."
     />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -533,54 +534,8 @@
         <div class="section-label reveal">Réalisations</div>
         <h2 class="section-title reveal">Projets</h2>
         <div class="projects-grid">
-          <article
-            class="project-card project-featured reveal"
-            onclick="openModal('modal-ia')"
-          >
-            <div class="project-tag">Stage 2ème année · 2026</div>
-            <h3>IA Générative On-Premise</h3>
-            <p>
-              Déploiement d'un assistant IA local connecté à Oracle 19c via MCP
-              &amp; Docker — sans aucune fuite de données vers internet.
-            </p>
-            <div class="project-stack">
-              <span>Python</span><span>Docker</span><span>LM Studio</span
-              ><span>Oracle 19c</span><span>MCP/SSE</span>
-            </div>
-            <div class="project-link">En savoir plus →</div>
-          </article>
-
-          <article class="project-card reveal" onclick="openModal('modal-sql')">
-            <div class="project-tag">Stage 1ère année · 2025</div>
-            <h3>Reporting Logistique SQL</h3>
-            <p>
-              Outil de suivi des retards de ravitaillement des distributeurs
-              automatiques, intégré dans le système VEGA.
-            </p>
-            <div class="project-stack">
-              <span>Oracle SQL</span><span>Draw.io</span><span>HTML/CSS</span>
-            </div>
-            <div class="project-link">En savoir plus →</div>
-          </article>
-
-          <article
-            class="project-card reveal"
-            onclick="openModal('modal-kotlin')"
-          >
-            <div class="project-tag">Projet scolaire</div>
-            <h3>Suite Applicative Kotlin</h3>
-            <p>
-              De la logique algorithmique (Bataille Navale) à l'architecture POO
-              avancée (KotlinMonster).
-            </p>
-            <div class="project-stack">
-              <span>Kotlin</span><span>POO</span><span>Git</span>
-            </div>
-            <div class="project-link">Voir sur GitHub →</div>
-          </article>
-
           <article class="project-card reveal" onclick="openModal('modal-geo')">
-            <div class="project-tag">Projet scolaire</div>
+            <div class="project-tag">Projet scolaire · 2024</div>
             <h3>GeoWorld</h3>
             <p>
               Application de consultation de données géopolitiques avec filtrage
@@ -594,11 +549,38 @@
 
           <article
             class="project-card reveal"
+            onclick="openModal('modal-kotlin')"
+          >
+            <div class="project-tag">Projet scolaire · 2024–2025</div>
+            <h3>Suite Applicative Kotlin</h3>
+            <p>
+              De la logique algorithmique (Bataille Navale) à l'architecture POO
+              avancée (KotlinMonster).
+            </p>
+            <div class="project-stack">
+              <span>Kotlin</span><span>POO</span><span>Git</span>
+            </div>
+            <div class="project-link">Voir sur GitHub →</div>
+          </article>
+
+          <article class="project-card reveal" onclick="openModal('modal-sql')">
+            <div class="project-tag">Stage 1ère année · Mai–Juin 2025</div>
+            <h3>Reporting Logistique SQL</h3>
+            <p>
+              Outil de suivi des retards de ravitaillement des distributeurs
+              automatiques, intégré dans le système VEGA.
+            </p>
+            <div class="project-stack">
+              <span>Oracle SQL</span><span>Draw.io</span><span>HTML/CSS</span>
+            </div>
+            <div class="project-link">En savoir plus →</div>
+          </article>
+
+          <article
+            class="project-card reveal"
             onclick="openModal('modal-arkania')"
           >
-            <div class="project-tag">
-              Projet scolaire · Dérivé KotlinMonster
-            </div>
+            <div class="project-tag">Projet scolaire · 2025</div>
             <h3>Arkania</h3>
             <p>
               Application web RPG avec gestion complète des rôles (joueur /
@@ -615,7 +597,7 @@
             class="project-card reveal"
             onclick="openModal('modal-savapp')"
           >
-            <div class="project-tag">Projet scolaire</div>
+            <div class="project-tag">Projet scolaire · 2025–2026</div>
             <h3>SavApp — Calculateur de saponification</h3>
             <p>
               Application web de calcul métier pour la fabrication de savons à
@@ -627,6 +609,23 @@
               ><span>MariaDB</span><span>API REST</span>
             </div>
             <div class="project-link">Voir sur GitHub →</div>
+          </article>
+
+          <article
+            class="project-card project-featured reveal"
+            onclick="openModal('modal-ia')"
+          >
+            <div class="project-tag">Stage 2ème année · Jan.–Fév. 2026</div>
+            <h3>IA Générative On-Premise</h3>
+            <p>
+              Déploiement d'un assistant IA local connecté à Oracle 19c via MCP
+              &amp; Docker — sans aucune fuite de données vers internet.
+            </p>
+            <div class="project-stack">
+              <span>Python</span><span>Docker</span><span>LM Studio</span
+              ><span>Oracle 19c</span><span>MCP/SSE</span>
+            </div>
+            <div class="project-link">En savoir plus →</div>
           </article>
         </div>
       </div>
@@ -1252,9 +1251,7 @@
         </div>
       </div>
     </section>
-
     <!-- VEILLE -->
-  
     <section id="veille" class="section section-dark">
       <div class="container">
         <div class="section-label reveal">Veille technologique</div>
@@ -1440,6 +1437,13 @@
                   class="source-item"
                   >France Info — "La production mondiale d'hélium est perturbée"
                   (Avril 2026)</a
+                >
+                <a
+                  href="https://pcpartpicker.com/trends/price/memory/"
+                  target="_blank"
+                  class="source-item"
+                  >PCPartPicker Trends — Historique des prix mémoire DDR4/DDR5
+                  (temps réel)</a
                 >
               </div>
             </div>
